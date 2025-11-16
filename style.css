@@ -1,11 +1,15 @@
 :root {
-    --clr-bg: rgb(21, 21, 21);
+    --clr-bg: rgba(9, 9, 9, 1);
     --clr-main: rgb(198, 198, 198);
     --clr-sec: rgb(173, 86, 255);
 }
 
+p {
+    margin-bottom: 5em;
+}
+
 body {
-    margin-top: 2em;
+    margin-top: 10em;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -13,20 +17,113 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--clr-bg);
-    font-family: 'Finlandica', sans-serif;
+    background-color: var(--clr-bg);
+    background-image: linear-gradient(24deg, rgba(9, 9, 9, 1) 0%, rgba(37, 37, 37, 1) 50%, rgba(92, 43, 126, 1) 100%);
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: var(--clr-main);
-    font-size: 20px;
+    font-size: 30px;
     max-width: 70%;
+}
+
+.project {
+    display: flex;
+    /* max-width: 80%; */
+    text-align: left;
+    color: var(--clr-main);
+    text-decoration: none;
+    height: 320px;
+    background-color: #121212;
+    /* background-color: rgba(0, 0, 0, 1);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 22%, rgba(41, 53, 86, 1) 100%); */
+    border: 1px solid #232323;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(54, 54, 54, 0.1);
+    margin-bottom: 3em;
+}
+
+.content {
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-grow: 1;
+    font-size: 25;
+    
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+}
+
+.project_desc {
+    font-size: 22px;
+}
+
+.project_banner {
+    width: 600px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    mask-image: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%); 
+    -webkit-mask-image: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
+.project-logo {
+    /* width: 150%; */
+    max-width: 500px; /* Limit max width for visual consistency */
+    margin-top: -2em;
+    margin-bottom: -3em;
+}
+
+.rs-logo {
+    align-content: center;
+    /* width: 150%; */
+    max-width: 250px; /* Limit max width for visual consistency */
+    margin-top: 0.25em;
+    /* margin-bottom: -1em; */
+}
+
+h4 {
+    font-size: 35px;
+    align-self: left;
+    margin-bottom: 0.5em;
+}
+
+.skill {
+    /* display: flex; */
+    align-self: center;
+    text-align: left;
+    color: var(--clr-main);
+    text-decoration: none;
+    height: 320px;
+    /* background-color: #121212; */
+    background-color: rgba(0, 0, 0, 1);
+    background-image: linear-gradient(19deg, rgba(0, 0, 0, 1) 22%, rgba(41, 53, 86, 1) 100%);
+    border: 1px solid #232323;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(54, 54, 54, 0.1);
+    margin-bottom: 3em;
+}
+
+.skill-list {
+    gap: 20px;
+    /* grid-template-columns: repeat(3, 1fr); */
 }
 
 header {
     font-size: 65px;
     margin-bottom: 1em;
+    margin-top: 0.75em;
 }
 
 h2 {
     margin: 1em 0em 0em;
+    font-size: 55px;
+    margin-bottom: 2em;
+}
+
+.neon-icon {
+    width: 50px;
 }
 
 .neon-button {
@@ -35,9 +132,10 @@ h2 {
     cursor: pointer;
     text-decoration: none;
     border: var(--clr-sec) 0.1em solid;
-    padding: 0.3em .5em;
+    padding: 0.4em .5em 0.2em 0.5em;
     border-radius: 0.25em;
     margin: 0em 0em .3em;
+    margin-bottom: 3em;
 }
 
 .purple {
@@ -45,24 +143,73 @@ h2 {
 }
 
 @media (max-width: 1100px) {
-    body {
-        margin-top: 2em;
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: var(--clr-bg);
-        font-family: 'Finlandica', sans-serif;
-        color: var(--clr-main);
-        font-size: 50px;
-        max-width: 90%;
-    }
+  :root {
+    --page-max-width: 92%;
+  }
 
-    header {
-        font-size: 140px;
-        margin-bottom: 0.5em;
-    }
+  body {
+    max-width: var(--page-max-width);
+    margin-top: 2.5rem;
+    font-size: 16px; /* base font for mobile */
+    padding: 0 1rem;
+    display: block; /* easier flow on narrow screens */
+  }
+
+  header {
+    /* font-size: 80px; */
+    /* margin-bottom: 0.5rem; */
+    margin-top: 4em;
+    /* text-align: center; */
+  }
+
+  p { font-size: 25px; margin-bottom: 10em; }
+
+  .project,
+  .skill {
+    display: block;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .content {
+    padding: 0;
+    flex-grow: 0;
+    display: block;
+  }
+
+  .neon-button {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 50px;
+    margin-bottom: 1.25em;
+    margin-top: 0.75em;
+  }
+
+  .project_desc {
+    font-size: 25px;
+    margin-bottom: 0.75rem;
+  }
+
+  .project_banner,
+  .project-logo,
+  .rs-logo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 0.75rem 0;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .skill-list { gap: 12px; }
+
+  /* Optional: reduce heavy shadows/borders on mobile */
+  .project, .skill {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 1px solid #1b1b1b;
+  }
 }

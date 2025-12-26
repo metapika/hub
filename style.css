@@ -150,7 +150,7 @@ h2 {
   body {
     max-width: var(--page-max-width);
     margin-top: 2.5rem;
-    font-size: 40px; /* base font for mobile */
+    font-size: 50px; /* base font for mobile */
     padding: 0 1rem;
     display: block; /* easier flow on narrow screens */
   }
@@ -162,7 +162,7 @@ h2 {
     /* text-align: center; */
   }
 
-  p { font-size: 45px; margin-bottom: 10em; }
+  p { font-size: 55px; margin-bottom: 10em; }
 
   .project,
   .skill {
@@ -194,7 +194,7 @@ h2 {
   }
 
   .project_desc {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 0.75rem;
     margin-top: -1em;
   }

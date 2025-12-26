@@ -48,7 +48,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     flex-grow: 1;
-    font-size: 25;
+    font-size: 25px;
     
     display:flex;
     flex-direction: column;
@@ -150,7 +150,7 @@ h2 {
   body {
     max-width: var(--page-max-width);
     margin-top: 2.5rem;
-    font-size: 16px; /* base font for mobile */
+    font-size: 40px; /* base font for mobile */
     padding: 0 1rem;
     display: block; /* easier flow on narrow screens */
   }
@@ -162,7 +162,7 @@ h2 {
     /* text-align: center; */
   }
 
-  p { font-size: 25px; margin-bottom: 10em; }
+  p { font-size: 45px; margin-bottom: 10em; }
 
   .project,
   .skill {
@@ -174,24 +174,33 @@ h2 {
   }
   
   .content {
-    padding: 0;
+    padding: 20px;
     flex-grow: 0;
     display: block;
   }
 
   .neon-button {
-    font-size: 25px;
+    font-size: 60px;
   }
 
   h4 {
-    font-size: 50px;
+    font-size: 70px;
     margin-bottom: 1.25em;
     margin-top: 0.75em;
   }
 
+  h2 {
+    font-size: 80px;
+  }
+
   .project_desc {
-    font-size: 25px;
+    font-size: 40px;
     margin-bottom: 0.75rem;
+    margin-top: -1em;
+  }
+
+  .neon-icon {
+      width: 80px;
   }
 
   .project_banner,
